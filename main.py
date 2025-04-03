@@ -1,13 +1,13 @@
 import tkinter as tk
-from tkinter import ttk
-
 from ui.personalPanel import Personal
-from ui.admin_panel import AdminPanel
+from db import DataBase
+from dao.manage_dao import ManageDAO
 
 root=tk.Tk()
 root.title('Home')
-#Personal(root)
 root.state('zoomed')
 root.configure(bg="#0f0f0f")
-AdminPanel(root)
+
+db = DataBase() 
+personal=Personal(root)
 root.mainloop()
